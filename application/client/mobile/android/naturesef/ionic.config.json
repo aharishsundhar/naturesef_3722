@@ -1,0 +1,7 @@
+{
+  "name": "naturesef",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

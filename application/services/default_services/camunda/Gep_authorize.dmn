@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_0fnw5vs" name="DRD" namespace="http://camunda.org/schema/1.0/dmn">
+  <decision id="Accesslevel" name="Authorize">
+    <extensionElements>
+      <biodi:bounds x="150" y="150" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="resources">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>resources</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1rqn79m" label="resourcetype">
+        <inputExpression id="LiteralExpression_016sarj" typeRef="string">
+          <text>resourcetype</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="admin" name="Admin" typeRef="string" />
+      <output id="OutputClause_0vdltyr" label="developer" name="Developer" typeRef="string" />
+      <output id="OutputClause_16m831c" label="user" name="User" typeRef="string" />
+      <output id="OutputClause_06hgt34" label="guest" name="Guest" typeRef="string" />
+      <rule id="DecisionRule_305874">
+        <inputEntry id="UnaryTests_057118">
+          <text>"home"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_074524">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_823165">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_431637">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_472909">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_426986">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_308635">
+        <inputEntry id="UnaryTests_106641">
+          <text>"admin"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_279619">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_994709">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_319025">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_600050">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_268494">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_570584">
+        <inputEntry id="UnaryTests_688257">
+          <text>"logout"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_857341">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_500017">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_203951">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_771084">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_395729">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_105715">
+        <inputEntry id="UnaryTests_247727">
+          <text>"login"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_144457">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_480443">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_255284">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_865486">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_546043">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_585105">
+        <inputEntry id="UnaryTests_357586">
+          <text>"authorization"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_909599">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_987977">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_064913">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_959626">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_661166">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_525123">
+        <inputEntry id="UnaryTests_107090">
+          <text>"manageroles"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_977139">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_693160">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_561425">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_605180">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_320053">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_179234">
+        <inputEntry id="UnaryTests_321085">
+          <text>"manageusers"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_241145">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_808122">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_067026">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_388348">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_660078">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+<rule id="DecisionRule_919725">
+        <inputEntry id="UnaryTests_046391">
+          <text>"sefscreen"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_553383">
+          <text>"Screen"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_091871">
+          <text>
+            {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_948650">
+          <text>
+             {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_046022">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_381140">
+          <text>
+              {"home":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"admin":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"logout":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"login":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}],"authorization":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageroles":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"manageusers":[{"Admin":{"value":true},"Developer":{"value":false},"User":{"value":false},"Guest":{"value":false}}],"sefscreen":[{"Admin":{"value":false},"Developer":{"value":false},"User":{"value":true},"Guest":{"value":false}}]}
+          </text>
+        </outputEntry>
+      </rule>
+       
+           </decisionTable>
+  </decision>
+</definitions>
